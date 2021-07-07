@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp1
+  labels:
+    name: myapp1
+spec:
+  containers:
+  - name: myapp1
+    image: nginx:alpine
+    volumeMounts:
+      - name:  shreyas-volume
+        mountPath:  /var/run/docker.sock
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80
+  volumes:
+  - name:  shreyas-volume
+    hostPath:
+        path:  /var/run/docker.sock
+        type: Socket

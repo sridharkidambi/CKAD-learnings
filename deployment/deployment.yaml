@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment3
+  labels: 
+    app: myapplabel-Deployment3
+    tier: Frontend1
+spec:
+  selector:
+    matchLabels:
+      app: skapp #should match 
+  replicas: 1
+  template:
+    metadata:
+      name: myapp-template
+      labels:
+        app: skapp #should match 
+    spec:
+      containers: 
+      - name: skapp
+        image: sridharkidambi/skapp
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+          - containerPort: 8081
+            port: 8081
+
+
+# spec:
+#   replicas: 3
+#   selector:
+#     app: myapp
+#   template:
+#     metadata:
+#       name: myapp
+#       labels:
+#         app: myapp
+#     spec:
+#       containers:
+#         - name: myapp
+#           image: <Image>
+#           ports:
+#             - containerPort: <Port>

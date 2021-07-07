@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: skapp
+  labels:
+    name: skapp
+spec:
+  containers:
+  - name: skapp
+    image: sridharkidambi/skapp
+    envFrom:
+    - configMapRef:
+       name: sampleconfigmap 
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8081

@@ -1,0 +1,23 @@
+apiVersion: v1
+data:
+  kidambi: familyname
+  sridhar: owner
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2021-06-26T08:24:40Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:kidambi: {}
+        f:sridhar: {}
+    manager: kubectl
+    operation: Update
+    time: "2021-06-26T08:24:40Z"
+  name: sampleconfigmap
+  namespace: default
+  resourceVersion: "60366"
+  selfLink: /api/v1/namespaces/default/configmaps/sampleconfigmap
+  uid: 272f613e-fc3b-4104-8008-fd47a1bd1fc5
