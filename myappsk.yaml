@@ -11,6 +11,14 @@ spec:
     envFrom:
     - configMapRef:
        name: sampleconfigmap 
+
+    env:
+      - name:  SECRET_PWD
+        valueFrom:
+          secretKeyRef:
+            name:  my-secret
+            key:  pwd
+
     resources:
       limits:
         memory: "128Mi"
