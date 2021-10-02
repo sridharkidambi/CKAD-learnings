@@ -1,0 +1,42 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  creationTimestamp: "2021-09-10T18:08:06Z"
+  generation: 1
+  name: new-deny
+  namespace: default
+  resourceVersion: "491548"
+  uid: 2054e571-30eb-495d-b883-0934abc595ad
+spec:
+  podSelector: 
+    matchLabels:
+      app: sknixPolicy
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+    - from:
+      - podSelector:
+          matchLabels:
+              app: sknixPolicy
+      - podSelector:
+          matchLabels:
+              app: sampleone
+      ports:
+        - protocol: TCP
+          port: 6379
+        - protocol: TCP
+          port: 6380
+  egress:
+    - to:
+      - podSelector:
+          matchLabels:
+            app: tryit
+      - podSelector:
+          matchLabels:
+              app: sampleapp
+              id: anme
+      ports:
+        - protocol: TCP
+          port: 80
+

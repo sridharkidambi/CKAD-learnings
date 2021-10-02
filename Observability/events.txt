@@ -1,0 +1,93 @@
+LAST SEEN   TYPE      REASON             OBJECT                            MESSAGE
+4h9m        Warning   FailedNeedsStart   cronjob/skapp                     Cannot determine if job needs to be started: too many missed start time (> 100). Set or decrease .spec.startingDeadlineSeconds or check clock skew
+4h9m        Warning   FailedNeedsStart   cronjob/mycronjob                 Cannot determine if job needs to be started: too many missed start time (> 100). Set or decrease .spec.startingDeadlineSeconds or check clock skew
+4h8m        Warning   FailedGetScale     horizontalpodautoscaler/nginx34   deployments/scale.apps "nginx34" not found
+4h43m       Normal    Scheduled          pod/testliveness                  Successfully assigned default/testliveness to minikube
+4h43m       Normal    Pulling            pod/testliveness                  Pulling image "nginx"
+4h43m       Normal    Created            pod/testliveness                  Created container testliveness
+4h43m       Normal    Pulled             pod/testliveness                  Successfully pulled image "nginx" in 3.5493305s
+4h43m       Normal    Started            pod/testliveness                  Started container testliveness
+4h43m       Warning   Unhealthy          pod/testliveness                  Liveness probe failed: HTTP probe failed with statuscode: 404
+4h43m       Normal    Killing            pod/testliveness                  Stopping container testliveness
+4h30m       Normal    Scheduled          pod/livreadytest                  Successfully assigned default/livreadytest to minikube
+4h30m       Normal    Pulling            pod/livreadytest                  Pulling image "nginx:latest"
+4h30m       Normal    Started            pod/livreadytest                  Started container livreadytest
+4h30m       Normal    Created            pod/livreadytest                  Created container livreadytest
+4h30m       Normal    Pulled             pod/livreadytest                  Successfully pulled image "nginx:latest" in 3.1738869s
+4h29m       Warning   Unhealthy          pod/livreadytest                  Readiness probe failed: HTTP probe failed with statuscode: 404
+4h29m       Warning   Unhealthy          pod/livreadytest                  Liveness probe failed: HTTP probe failed with statuscode: 404
+4h29m       Normal    Killing            pod/livreadytest                  Stopping container livreadytest
+4h19m       Normal    Scheduled          pod/logcheck                      Successfully assigned default/logcheck to minikube
+4h19m       Normal    Pulling            pod/logcheck                      Pulling image "busybox"
+4h19m       Normal    Created            pod/logcheck                      Created container logcheck
+4h19m       Normal    Pulled             pod/logcheck                      Successfully pulled image "busybox" in 3.2602947s
+4h19m       Normal    Started            pod/logcheck                      Started container logcheck
+4h18m       Normal    Killing            pod/logcheck                      Stopping container logcheck
+4h17m       Normal    Scheduled          pod/logcheck                      Successfully assigned default/logcheck to minikube
+4h17m       Normal    Pulling            pod/logcheck                      Pulling image "busybox"
+4h17m       Normal    Started            pod/logcheck                      Started container logcheck
+4h17m       Normal    Created            pod/logcheck                      Created container logcheck
+4h17m       Normal    Pulled             pod/logcheck                      Successfully pulled image "busybox" in 3.6691682s
+4h16m       Normal    Scheduled          pod/logcheck                      Successfully assigned default/logcheck to minikube
+4h16m       Normal    Pulling            pod/logcheck                      Pulling image "busybox"
+4h16m       Normal    Created            pod/logcheck                      Created container logcheck
+4h16m       Normal    Pulled             pod/logcheck                      Successfully pulled image "busybox" in 3.3328519s
+4h16m       Normal    Started            pod/logcheck                      Started container logcheck
+4h15m       Normal    Killing            pod/logcheck                      Stopping container logcheck
+4h11m       Normal    Scheduled          pod/logcheck                      Successfully assigned default/logcheck to minikube
+4h11m       Normal    Pulling            pod/logcheck                      Pulling image "busybox"
+4h11m       Normal    Pulled             pod/logcheck                      Successfully pulled image "busybox" in 3.3569966s
+4h11m       Normal    Started            pod/logcheck                      Started container logcheck
+4h11m       Normal    Created            pod/logcheck                      Created container logcheck
+4h10m       Normal    Killing            pod/logcheck                      Stopping container logcheck
+4h9m        Normal    Scheduled          pod/logcheck                      Successfully assigned default/logcheck to minikube
+4h9m        Normal    Pulling            pod/logcheck                      Pulling image "busybox"
+4h9m        Warning   Failed             pod/logcheck                      Error: failed to start container "logcheck": Error response from daemon: OCI runtime create failed: container_linux.go:380: starting container process caused: exec: "echo I am from busybox pod; sleep 3600;": executable file not found in $PATH: unknown
+4h9m        Normal    Pulled             pod/logcheck                      Successfully pulled image "busybox" in 2.9707471s
+4h9m        Normal    Created            pod/logcheck                      Created container logcheck
+4h8m        Normal    Scheduled          pod/logcheck                      Successfully assigned default/logcheck to minikube
+4h8m        Normal    Pulling            pod/logcheck                      Pulling image "busybox"
+4h8m        Normal    Pulled             pod/logcheck                      Successfully pulled image "busybox" in 3.300756s
+4h8m        Normal    Created            pod/logcheck                      Created container logcheck
+4h8m        Warning   Failed             pod/logcheck                      Error: failed to start container "logcheck": Error response from daemon: OCI runtime create failed: container_linux.go:380: starting container process caused: exec: "echo I am from busybox pod; sleep 3600;": executable file not found in $PATH: unknown
+4h7m        Normal    Scheduled          pod/logcheck                      Successfully assigned default/logcheck to minikube
+4h7m        Normal    Pulling            pod/logcheck                      Pulling image "busybox"
+4h7m        Warning   Failed             pod/logcheck                      Error: failed to start container "logcheck": Error response from daemon: OCI runtime create failed: container_linux.go:380: starting container process caused: exec: "echo I am from busybox pod; sleep 3600;": executable file not found in $PATH: unknown
+4h7m        Normal    Created            pod/logcheck                      Created container logcheck
+4h7m        Normal    Pulled             pod/logcheck                      Successfully pulled image "busybox" in 3.137548s
+4h7m        Normal    Scheduled          pod/logcheck                      Successfully assigned default/logcheck to minikube
+4h7m        Normal    Pulling            pod/logcheck                      Pulling image "busybox"
+4h7m        Normal    Pulled             pod/logcheck                      Successfully pulled image "busybox" in 3.3499355s
+4h7m        Normal    Started            pod/logcheck                      Started container logcheck
+4h7m        Normal    Created            pod/logcheck                      Created container logcheck
+15m         Normal    Killing            pod/logcheck                      Stopping container logcheck
+14m         Normal    Scheduled          pod/logcheck                      Successfully assigned default/logcheck to minikube
+14m         Normal    Pulling            pod/logcheck                      Pulling image "busybox"
+14m         Normal    Pulled             pod/logcheck                      Successfully pulled image "busybox" in 3.101999s
+14m         Normal    Created            pod/logcheck                      Created container logcheck
+14m         Warning   Failed             pod/logcheck                      Error: failed to start container "logcheck": Error response from daemon: OCI runtime create failed: container_linux.go:380: starting container process caused: exec: "echo I am from busybox pod; sleep 3600;": executable file not found in $PATH: unknown
+13m         Normal    Pulling            pod/logcheck                      Pulling image "busybox"
+13m         Normal    Scheduled          pod/logcheck                      Successfully assigned default/logcheck to minikube
+13m         Normal    Pulled             pod/logcheck                      Successfully pulled image "busybox" in 3.6190132s
+13m         Normal    Created            pod/logcheck                      Created container logcheck
+13m         Warning   Failed             pod/logcheck                      Error: failed to start container "logcheck": Error response from daemon: OCI runtime create failed: container_linux.go:380: starting container process caused: exec: "echo I am from busybox pod; sleep 3600;": executable file not found in $PATH: unknown
+12m         Normal    Scheduled          pod/logcheck                      Successfully assigned default/logcheck to minikube
+12m         Normal    Pulling            pod/logcheck                      Pulling image "busybox"
+12m         Normal    Pulled             pod/logcheck                      Successfully pulled image "busybox" in 3.2295293s
+12m         Normal    Created            pod/logcheck                      Created container logcheck
+12m         Warning   Failed             pod/logcheck                      Error: failed to start container "logcheck": Error response from daemon: OCI runtime create failed: container_linux.go:380: starting container process caused: exec: "echo I am from busybox pod; sleep 3600;": executable file not found in $PATH: unknown
+8m27s       Normal    Scheduled          pod/logcheck                      Successfully assigned default/logcheck to minikube
+8m26s       Normal    Pulling            pod/logcheck                      Pulling image "busybox"
+8m23s       Warning   Failed             pod/logcheck                      Error: failed to start container "logcheck": Error response from daemon: OCI runtime create failed: container_linux.go:380: starting container process caused: exec: "echo I am from busybox pod; sleep 3600;": executable file not found in $PATH: unknown
+8m23s       Normal    Created            pod/logcheck                      Created container logcheck
+8m23s       Normal    Pulled             pod/logcheck                      Successfully pulled image "busybox" in 3.0033894s
+8m1s        Normal    Scheduled          pod/logcheck                      Successfully assigned default/logcheck to minikube
+8m1s        Normal    Pulling            pod/logcheck                      Pulling image "nginx"
+7m58s       Normal    Pulled             pod/logcheck                      Successfully pulled image "nginx" in 2.915145s
+7m58s       Normal    Started            pod/logcheck                      Started container logcheck
+7m58s       Normal    Created            pod/logcheck                      Created container logcheck
+6m45s       Normal    Scheduled          pod/logcheck                      Successfully assigned default/logcheck to minikube
+6m44s       Normal    Pulling            pod/logcheck                      Pulling image "nginx"
+6m41s       Normal    Started            pod/logcheck                      Started container logcheck
+6m41s       Normal    Pulled             pod/logcheck                      Successfully pulled image "nginx" in 3.2427003s
+6m41s       Normal    Created            pod/logcheck                      Created container logcheck

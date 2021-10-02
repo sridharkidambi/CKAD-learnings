@@ -1,0 +1,30 @@
+LAST SEEN   TYPE      REASON                         OBJECT                            MESSAGE
+34s         Warning   FailedNeedsStart               cronjob/mycronjob                 Cannot determine if job needs to be started: too many missed start time (> 100). Set or decrease .spec.startingDeadlineSeconds or check clock skew
+34s         Warning   FailedNeedsStart               cronjob/skapp                     Cannot determine if job needs to be started: too many missed start time (> 100). Set or decrease .spec.startingDeadlineSeconds or check clock skew
+86m         Normal    Pulling                        pod/secbusybox                    Pulling image "busybox"
+29s         Warning   BackOff                        pod/my-dep-68d7dcffc4-xk2k6       Back-off restarting failed container
+86m         Normal    Created                        pod/secbusybox                    Created container secbusybox
+1s          Warning   FailedGetResourceMetric        horizontalpodautoscaler/nginx34   failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server could not find the requested resource (get pods.metrics.k8s.io)
+86m         Normal    Started                        pod/secbusybox                    Started container secbusybox
+99m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/nginx34   invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server could not find the requested resource (get pods.metrics.k8s.io)
+104m        Normal    Scheduled                      pod/sknix                         Successfully assigned default/sknix to minikube
+99m         Normal    Pulling                        pod/sknix                         Pulling image "nginx"
+103m        Normal    Created                        pod/sknix                         Created container sknix
+104m        Normal    Pulled                         pod/sknix                         Successfully pulled image "nginx" in 3.4588313s
+103m        Normal    Started                        pod/sknix                         Started container sknix
+4m36s       Warning   Unhealthy                      pod/sknix                         Liveness probe failed: HTTP probe failed with statuscode: 404
+103m        Normal    Killing                        pod/sknix                         Container sknix failed liveness probe, will be restarted
+103m        Warning   Unhealthy                      pod/sknix                         Readiness probe failed: Get "http://172.17.0.15:80/": dial tcp 172.17.0.15:80: connect: connection refused
+103m        Normal    Pulled                         pod/sknix                         Successfully pulled image "nginx" in 2.9302026s
+103m        Normal    Pulled                         pod/sknix                         Successfully pulled image "nginx" in 3.2876887s
+9m29s       Warning   BackOff                        pod/sknix                         Back-off restarting failed container
+86m         Normal    Pulled                         pod/secbusybox                    Successfully pulled image "busybox" in 2.7534132s
+3m4s        Normal    Scheduled                      pod/sknix                         Successfully assigned default/sknix to minikube
+14s         Normal    Pulling                        pod/sknix                         Pulling image "nginx"
+3m1s        Normal    Pulled                         pod/sknix                         Successfully pulled image "nginx" in 2.9469464s
+11s         Normal    Created                        pod/sknix                         Created container sknix
+10s         Normal    Started                        pod/sknix                         Started container sknix
+14s         Warning   Unhealthy                      pod/sknix                         Liveness probe failed: HTTP probe failed with statuscode: 404
+14s         Normal    Killing                        pod/sknix                         Container sknix failed liveness probe, will be restarted
+86s         Normal    Pulled                         pod/sknix                         Successfully pulled image "nginx" in 3.0391445s
+11s         Normal    Pulled                         pod/sknix                         Successfully pulled image "nginx" in 3.3820772s

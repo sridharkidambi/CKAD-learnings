@@ -1,0 +1,87 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    name: webapp
+  creationTimestamp: "2021-08-28T09:41:37Z"
+  labels:
+    env: uat1
+  name: nginx9
+  namespace: default
+  resourceVersion: "352719"
+  uid: 41bad1c1-ae45-4e03-9c18-d35bfc22a59a
+spec:
+  replicas: 1
+  containers:
+  - image: nginx
+    imagePullPolicy: Always
+    name: nginx1
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: default-token-6sgv8
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: minikube
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: default-token-6sgv8
+    secret:
+      defaultMode: 420
+      secretName: default-token-6sgv8
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2021-08-28T09:41:37Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2021-08-28T09:41:42Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2021-08-28T09:41:42Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2021-08-28T09:41:37Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://5ceb31a6cd957d8edcb9fd9ba2fc7e23ae9f9c6b709419f7bd36dcab60e333cc
+    image: nginx:latest
+    imageID: docker-pullable://nginx@sha256:4d4d96ac750af48c6a551d757c1cbfc071692309b491b70b2b8976e102dd3fef
+    lastState: {}
+    name: nginx1
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2021-08-28T09:41:41Z"
+  hostIP: 192.168.49.2
+  phase: Running
+  podIP: 172.17.0.14
+  podIPs:
+  - ip: 172.17.0.14
+  qosClass: BestEffort
+  startTime: "2021-08-28T09:41:37Z"

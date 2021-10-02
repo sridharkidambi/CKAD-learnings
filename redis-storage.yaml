@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2021-09-01T17:43:08Z"
+  labels:
+    run: sampleonne
+  name: sampleonne
+  namespace: default
+  resourceVersion: "393897"
+  uid: 5ecae3ae-4073-4cf0-a6bc-f939ddd16367
+spec:
+  containers:
+  - image: nginx
+    imagePullPolicy: Always
+    name: sampleonne
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /data/redis
+      name: default-token-6sgv8
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: default-token-6sgv8
+    emptyDir: {}    
+status:
+  phase: Pending
+  qosClass: BestEffort

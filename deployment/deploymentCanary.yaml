@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deployment3
+  name: skappcanary
   labels: 
-    app: myapplabel-Deployment3
+    app: skappcanary
     tier: Frontend1
 spec:
   selector:
     matchLabels:
       app: skapp #should match 
-      track: stable
-  replicas: 2
+      track: canary
+  replicas: 1
   template:
     metadata:
       name: myapp-template
       labels:
         app: skapp #should match 
-        track: stable
+        track: canary
     spec:
       containers: 
       - name: skapp
-        image: sridharkidambi/skapp
+        image: sridharkidambi/skapp:1.0
         resources:
           limits:
             memory: "128Mi"

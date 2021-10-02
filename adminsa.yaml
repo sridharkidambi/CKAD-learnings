@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2021-09-09T17:45:19Z"
+  name: admin
+  namespace: default
+  resourceVersion: "480124"
+  uid: 9bfdad2a-689b-4149-8168-7bd52c8dcbf1
+secrets:
+- name: admin-token-dkx66

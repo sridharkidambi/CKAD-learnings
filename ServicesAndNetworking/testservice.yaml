@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: testservice
+  labels:
+    app: my-nginx
+spec:
+  selector:
+    app: my-nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376

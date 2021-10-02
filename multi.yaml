@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: nginx2
+  name: nginx2
+spec:
+  containers:
+  - args:
+    - bin/sh
+    - -c
+    - sleep 3600; ls
+    image: nginx
+    name: nginx2
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
