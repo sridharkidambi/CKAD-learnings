@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: pvcpod
+  name: pvcpod
+spec:
+  volumes:
+    - name: task-pv-claim
+      persistentVolumeClaim:
+        claimName: task-pv-claim1
+  containers:
+  - args:
+    - restart=Never
+    image: nginx
+    name: pvcpod
+    volumeMounts:
+      - mountPath: "/usr/share/nginx/html"
+        name: task-pv-claim
+    ports:
+    - containerPort: 80
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

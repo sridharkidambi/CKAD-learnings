@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: sidecarmultippod
+  name: sidecarmultippod
+spec:
+  volumes:
+    - name: emptydirvol
+      emptyDir: {}
+    
+  containers:
+
+  - args:
+    - /bin/sh
+    - -c
+    - while true; do echo ‘Hi I am from Main container’ >> /var/log/index.html; sleep 5; done
+    image: busybox
+    name: sidecarmultippod
+    volumeMounts:
+      - name:  emptydirvol
+        mountPath:  /var/log
+    resources: {}
+  - args:
+    - /bin/sh
+    - -c
+    - echo Hi I am from Main container
+    image: nginx
+    ports:
+      - containerPort: 80
+    name: sidecarmultippod1
+    volumeMounts:
+      - name:  emptydirvol
+        mountPath:  /usr/share/nginx/html 
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
