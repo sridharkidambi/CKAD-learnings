@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: "2021-10-09T07:27:36Z"
+  generation: 1
+  labels:
+    app: revproxy
+    client: user
+  name: question-5
+  namespace: ggckad-s0
+  resourceVersion: "678795"
+  uid: 57cef36d-6f20-4d45-b977-75a6c3c10617
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 6
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: question-5
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: question-5
+    spec:
+      containers:
+      - image: nginx:1.7.9
+        imagePullPolicy: IfNotPresent
+        name: nginx
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status: {}

@@ -1,0 +1,847 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-10-04T13:53:16Z"
+    generateName: cronjobtest-1633355580-
+    labels:
+      controller-uid: dce1d17e-a115-4c81-aae6-4ce4b4850d83
+      job-name: cronjobtest-1633355580
+    name: cronjobtest-1633355580-485vw
+    namespace: default
+    ownerReferences:
+    - apiVersion: batch/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Job
+      name: cronjobtest-1633355580
+      uid: dce1d17e-a115-4c81-aae6-4ce4b4850d83
+    resourceVersion: "637136"
+    uid: 7ed9c21b-987f-4de1-8e40-2f07f22193b3
+  spec:
+    containers:
+    - command:
+      - /bin/sh
+      - -c
+      - date; echo  hello from kubernetes cluster
+      image: busybox
+      imagePullPolicy: Always
+      name: cronjobtest
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-6sgv8
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: minikube
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: OnFailure
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-6sgv8
+      secret:
+        defaultMode: 420
+        secretName: default-token-6sgv8
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T13:53:16Z"
+      reason: PodCompleted
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T13:53:16Z"
+      reason: PodCompleted
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T13:53:16Z"
+      reason: PodCompleted
+      status: "False"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T13:53:16Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://f77ef88e25a47e24a552e501f328f764bc7a7517922df56730a5a594f677c3d8
+      image: busybox:latest
+      imageID: docker-pullable://busybox@sha256:52f73a0a43a16cf37cd0720c90887ce972fe60ee06a687ee71fb93a7ca601df7
+      lastState: {}
+      name: cronjobtest
+      ready: false
+      restartCount: 0
+      started: false
+      state:
+        terminated:
+          containerID: docker://f77ef88e25a47e24a552e501f328f764bc7a7517922df56730a5a594f677c3d8
+          exitCode: 0
+          finishedAt: "2021-10-04T13:53:20Z"
+          reason: Completed
+          startedAt: "2021-10-04T13:53:20Z"
+    hostIP: 192.168.49.2
+    phase: Succeeded
+    podIP: 172.17.0.3
+    podIPs:
+    - ip: 172.17.0.3
+    qosClass: BestEffort
+    startTime: "2021-10-04T13:53:16Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-10-04T13:54:06Z"
+    generateName: cronjobtest-1633355640-
+    labels:
+      controller-uid: 0908d908-aa29-4be2-b77f-0f1be53e3d0f
+      job-name: cronjobtest-1633355640
+    name: cronjobtest-1633355640-9h4zf
+    namespace: default
+    ownerReferences:
+    - apiVersion: batch/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Job
+      name: cronjobtest-1633355640
+      uid: 0908d908-aa29-4be2-b77f-0f1be53e3d0f
+    resourceVersion: "637194"
+    uid: c1128e88-839a-487d-bc60-321a77b29911
+  spec:
+    containers:
+    - command:
+      - /bin/sh
+      - -c
+      - date; echo  hello from kubernetes cluster
+      image: busybox
+      imagePullPolicy: Always
+      name: cronjobtest
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-6sgv8
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: minikube
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: OnFailure
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-6sgv8
+      secret:
+        defaultMode: 420
+        secretName: default-token-6sgv8
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T13:54:07Z"
+      reason: PodCompleted
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T13:54:07Z"
+      reason: PodCompleted
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T13:54:07Z"
+      reason: PodCompleted
+      status: "False"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T13:54:07Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://043076d69cae6f57482fbb4a5d554f5a62b3861ace7f2086fc1bac744c30f3e0
+      image: busybox:latest
+      imageID: docker-pullable://busybox@sha256:52f73a0a43a16cf37cd0720c90887ce972fe60ee06a687ee71fb93a7ca601df7
+      lastState: {}
+      name: cronjobtest
+      ready: false
+      restartCount: 0
+      started: false
+      state:
+        terminated:
+          containerID: docker://043076d69cae6f57482fbb4a5d554f5a62b3861ace7f2086fc1bac744c30f3e0
+          exitCode: 0
+          finishedAt: "2021-10-04T13:54:10Z"
+          reason: Completed
+          startedAt: "2021-10-04T13:54:10Z"
+    hostIP: 192.168.49.2
+    phase: Succeeded
+    podIP: 172.17.0.3
+    podIPs:
+    - ip: 172.17.0.3
+    qosClass: BestEffort
+    startTime: "2021-10-04T13:54:07Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-10-04T13:55:07Z"
+    generateName: cronjobtest-1633355700-
+    labels:
+      controller-uid: b6ee9fe8-e9f9-43c4-ae10-a8235bc9f691
+      job-name: cronjobtest-1633355700
+    name: cronjobtest-1633355700-w8zll
+    namespace: default
+    ownerReferences:
+    - apiVersion: batch/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Job
+      name: cronjobtest-1633355700
+      uid: b6ee9fe8-e9f9-43c4-ae10-a8235bc9f691
+    resourceVersion: "637257"
+    uid: 9cca7718-eb65-48ad-ab48-52c627e029df
+  spec:
+    containers:
+    - command:
+      - /bin/sh
+      - -c
+      - date; echo  hello from kubernetes cluster
+      image: busybox
+      imagePullPolicy: Always
+      name: cronjobtest
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-6sgv8
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: minikube
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: OnFailure
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-6sgv8
+      secret:
+        defaultMode: 420
+        secretName: default-token-6sgv8
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T13:55:07Z"
+      reason: PodCompleted
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T13:55:07Z"
+      reason: PodCompleted
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T13:55:07Z"
+      reason: PodCompleted
+      status: "False"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T13:55:07Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://1b238484c90ae3361e56ab8a84e628e54e6fe0ecbbdb17a4e790b9064df8a147
+      image: busybox:latest
+      imageID: docker-pullable://busybox@sha256:52f73a0a43a16cf37cd0720c90887ce972fe60ee06a687ee71fb93a7ca601df7
+      lastState: {}
+      name: cronjobtest
+      ready: false
+      restartCount: 0
+      started: false
+      state:
+        terminated:
+          containerID: docker://1b238484c90ae3361e56ab8a84e628e54e6fe0ecbbdb17a4e790b9064df8a147
+          exitCode: 0
+          finishedAt: "2021-10-04T13:55:11Z"
+          reason: Completed
+          startedAt: "2021-10-04T13:55:11Z"
+    hostIP: 192.168.49.2
+    phase: Succeeded
+    podIP: 172.17.0.3
+    podIPs:
+    - ip: 172.17.0.3
+    qosClass: BestEffort
+    startTime: "2021-10-04T13:55:07Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-10-04T11:50:26Z"
+    generateName: myapp-replica-
+    labels:
+      name: myapp
+    name: myapp-replica-8f4mn
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: myapp-replica
+      uid: 09fc3e01-3b04-4894-a696-505d9982a6df
+    resourceVersion: "633069"
+    uid: f10593af-72bc-4ed7-b378-45107f93338a
+  spec:
+    containers:
+    - image: nginx
+      imagePullPolicy: Always
+      name: myapp
+      ports:
+      - containerPort: 3000
+        protocol: TCP
+      resources:
+        limits:
+          cpu: 500m
+          memory: 128Mi
+        requests:
+          cpu: 500m
+          memory: 128Mi
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-6sgv8
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: minikube
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-6sgv8
+      secret:
+        defaultMode: 420
+        secretName: default-token-6sgv8
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:26Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:39Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:39Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:26Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://96300e21531134ed022d3ceb552860dcf371bc01a17dea01fa337cc9b3435aac
+      image: nginx:latest
+      imageID: docker-pullable://nginx@sha256:765e51caa9e739220d59c7f7a75508e77361b441dccf128483b7f5cce8306652
+      lastState: {}
+      name: myapp
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-10-04T11:50:39Z"
+    hostIP: 192.168.49.2
+    phase: Running
+    podIP: 172.17.0.9
+    podIPs:
+    - ip: 172.17.0.9
+    qosClass: Guaranteed
+    startTime: "2021-10-04T11:50:26Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-10-04T11:50:26Z"
+    generateName: myapp-replica-
+    labels:
+      name: myapp
+    name: myapp-replica-flnf9
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: myapp-replica
+      uid: 09fc3e01-3b04-4894-a696-505d9982a6df
+    resourceVersion: "633055"
+    uid: 84e9405e-f45a-4b22-a2c3-f602af3e37a6
+  spec:
+    containers:
+    - image: nginx
+      imagePullPolicy: Always
+      name: myapp
+      ports:
+      - containerPort: 3000
+        protocol: TCP
+      resources:
+        limits:
+          cpu: 500m
+          memory: 128Mi
+        requests:
+          cpu: 500m
+          memory: 128Mi
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-6sgv8
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: minikube
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-6sgv8
+      secret:
+        defaultMode: 420
+        secretName: default-token-6sgv8
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:26Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:32Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:32Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:26Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://8e6143f7462825258e32fa86e572bb15b2a16e65c0556ad024b7d8f0b6658b54
+      image: nginx:latest
+      imageID: docker-pullable://nginx@sha256:765e51caa9e739220d59c7f7a75508e77361b441dccf128483b7f5cce8306652
+      lastState: {}
+      name: myapp
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-10-04T11:50:32Z"
+    hostIP: 192.168.49.2
+    phase: Running
+    podIP: 172.17.0.8
+    podIPs:
+    - ip: 172.17.0.8
+    qosClass: Guaranteed
+    startTime: "2021-10-04T11:50:26Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-10-04T11:52:37Z"
+    labels:
+      run: sidecarmultippod
+    name: sidecarmultippod
+    namespace: default
+    resourceVersion: "633240"
+    uid: e1c28536-2bc6-4407-9e68-b3547f03c208
+  spec:
+    containers:
+    - args:
+      - /bin/sh
+      - -c
+      - while true; do echo ‘Hi I am from Main container’ >> /var/log/index.html;
+        sleep 5; done
+      image: busybox
+      imagePullPolicy: Always
+      name: sidecarmultippod
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/log
+        name: emptydirvol
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-6sgv8
+        readOnly: true
+    - args:
+      - /bin/sh
+      - -c
+      - echo Hi I am from Main container
+      image: nginx
+      imagePullPolicy: Always
+      name: sidecarmultippod1
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /usr/share/nginx/html
+        name: emptydirvol
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-6sgv8
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: minikube
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Never
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - emptyDir: {}
+      name: emptydirvol
+    - name: default-token-6sgv8
+      secret:
+        defaultMode: 420
+        secretName: default-token-6sgv8
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:52:37Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:52:37Z"
+      message: 'containers with unready status: [sidecarmultippod1]'
+      reason: ContainersNotReady
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:52:37Z"
+      message: 'containers with unready status: [sidecarmultippod1]'
+      reason: ContainersNotReady
+      status: "False"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:52:37Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://02405797064b89344eeaca8e8fb1440430a730d840c5f107dc70805986658cd0
+      image: busybox:latest
+      imageID: docker-pullable://busybox@sha256:52f73a0a43a16cf37cd0720c90887ce972fe60ee06a687ee71fb93a7ca601df7
+      lastState: {}
+      name: sidecarmultippod
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-10-04T11:52:41Z"
+    - containerID: docker://554e420ecf47906f6bdb9206e2d9ccfb94b75e1ca6f81d3747ba65171a12417b
+      image: nginx:latest
+      imageID: docker-pullable://nginx@sha256:765e51caa9e739220d59c7f7a75508e77361b441dccf128483b7f5cce8306652
+      lastState: {}
+      name: sidecarmultippod1
+      ready: false
+      restartCount: 0
+      started: false
+      state:
+        terminated:
+          containerID: docker://554e420ecf47906f6bdb9206e2d9ccfb94b75e1ca6f81d3747ba65171a12417b
+          exitCode: 0
+          finishedAt: "2021-10-04T11:52:44Z"
+          reason: Completed
+          startedAt: "2021-10-04T11:52:44Z"
+    hostIP: 192.168.49.2
+    phase: Running
+    podIP: 172.17.0.2
+    podIPs:
+    - ip: 172.17.0.2
+    qosClass: BestEffort
+    startTime: "2021-10-04T11:52:37Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-10-04T11:50:26Z"
+    generateName: webapp-9cf988f87-
+    labels:
+      app: webapp
+      pod-template-hash: 9cf988f87
+    name: webapp-9cf988f87-kptw6
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: webapp-9cf988f87
+      uid: f072bf81-ace8-4038-8b6a-3ce386a1dfe0
+    resourceVersion: "633052"
+    uid: 41cb56bf-024d-4d1d-915d-86bf19dcd719
+  spec:
+    containers:
+    - image: nginx:1.17.4
+      imagePullPolicy: IfNotPresent
+      name: nginx
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-6sgv8
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: minikube
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-6sgv8
+      secret:
+        defaultMode: 420
+        secretName: default-token-6sgv8
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:26Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:30Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:30Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:26Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: docker://02107d61d89b1929e052bae9f2d6ea3d98c7e3c4ce252d06b74a6268050c1790
+      image: nginx:1.17.4
+      imageID: docker-pullable://nginx@sha256:77ebc94e0cec30b20f9056bac1066b09fbdc049401b71850922c63fc0cc1762e
+      lastState: {}
+      name: nginx
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-10-04T11:50:29Z"
+    hostIP: 192.168.49.2
+    phase: Running
+    podIP: 172.17.0.11
+    podIPs:
+    - ip: 172.17.0.11
+    qosClass: BestEffort
+    startTime: "2021-10-04T11:50:26Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-10-04T11:50:26Z"
+    generateName: webapp-b465945c8-
+    labels:
+      app: webapp
+      pod-template-hash: b465945c8
+    name: webapp-b465945c8-9qnrr
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: webapp-b465945c8
+      uid: 5b66d990-4839-4ad2-8411-52c5a4c285e3
+    resourceVersion: "637293"
+    uid: d46ec6ac-3066-49a6-bf3e-f6aaf95d8811
+  spec:
+    containers:
+    - image: nginx:1.1.0
+      imagePullPolicy: IfNotPresent
+      name: nginx
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-6sgv8
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: minikube
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-6sgv8
+      secret:
+        defaultMode: 420
+        secretName: default-token-6sgv8
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:26Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:26Z"
+      message: 'containers with unready status: [nginx]'
+      reason: ContainersNotReady
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:26Z"
+      message: 'containers with unready status: [nginx]'
+      reason: ContainersNotReady
+      status: "False"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-10-04T11:50:26Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - image: nginx:1.1.0
+      imageID: ""
+      lastState: {}
+      name: nginx
+      ready: false
+      restartCount: 0
+      started: false
+      state:
+        waiting:
+          message: Back-off pulling image "nginx:1.1.0"
+          reason: ImagePullBackOff
+    hostIP: 192.168.49.2
+    phase: Pending
+    podIP: 172.17.0.10
+    podIPs:
+    - ip: 172.17.0.10
+    qosClass: BestEffort
+    startTime: "2021-10-04T11:50:26Z"
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

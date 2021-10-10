@@ -6,10 +6,13 @@ metadata:
     run: nginx1
   name: nginx1
 spec:
-  containers:
+ containers:
   - image: nginx
     name: nginx1
+    envFrom:
+      - configMapRef:
+          name: cfgvolume
     resources: {}
-  dnsPolicy: ClusterFirst
-  restartPolicy: Never
+ dnsPolicy: ClusterFirst
+ restartPolicy: Never
 status: {}

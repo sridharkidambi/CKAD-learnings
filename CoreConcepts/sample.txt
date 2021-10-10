@@ -1,0 +1,54 @@
+Name:         webapp-9cf988f87-kptw6
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Mon, 04 Oct 2021 17:20:26 +0530
+Labels:       app=webapp
+              pod-template-hash=9cf988f87
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.2
+IPs:
+  IP:           172.17.0.2
+Controlled By:  ReplicaSet/webapp-9cf988f87
+Containers:
+  nginx:
+    Container ID:   docker://3c2ac1735e772cd415d8843a450b4e08ed191a4e15951f3877484a467fb98abe
+    Image:          nginx:1.17.4
+    Image ID:        docker-pullable://nginx@sha256:77ebc94e0cec30b20f9056bac1066b09fbdc049401b71850922c63fc0cc1762e
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Mon, 04 Oct 2021 21:56:52 +0530
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    255
+      Started:      Mon, 04 Oct 2021 17:20:29 +0530
+      Finished:     Mon, 04 Oct 2021 21:56:23 +0530
+    Ready:          True
+    Restart Count:  1
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-6sgv8 (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-6sgv8:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-6sgv8
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From     Message
+  ----    ------          ----  ----     -------
+  Normal  SandboxChanged  41m   kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal  Pulled          41m   kubelet  Container image "nginx:1.17.4" already present on machine
+  Normal  Created         41m   kubelet  Created container nginx
+  Normal  Started         41m   kubelet  Started container nginx
