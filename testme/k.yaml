@@ -6,12 +6,40 @@ metadata:
     run: nginx1
   name: nginx1
 spec:
+ securityContext:
+  runAsUser: 1000
+  runAsGroup: 2000
+ volumes:
+  - name: nginx-volume
+    # emptyDir: {}
+    configMap:
+      name: cfgvolume
+      
  containers:
   - image: nginx
     name: nginx1
-    envFrom:
-      - configMapRef:
-          name: cfgvolume
+    securityContext:
+      runAsUser: 2000
+    volumeMounts:
+      - name: nginx-volume
+        mountPath: /etc/cfg
+    readinessProbe:
+      httpGet:
+        path: /
+        port: 80
+    livenessProble:
+      httpGet:
+        path: /
+        port: 80
+    # envFrom:
+    #   - configMapRef:
+    #       name: cfgvolume
+    # env:
+    #   - name: ENVIRONMENT
+    #     valueFrom:
+    #       configMapKeyRef:
+    #         name: cfgvolume
+    #         key: var1
     resources: {}
  dnsPolicy: ClusterFirst
  restartPolicy: Never
